@@ -7,7 +7,7 @@ import { useWallet } from "@solana/wallet-adapter-react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 // Constants
-const TWITTER_HANDLE = "_buildspace";
+const TWITTER_HANDLE = "solllve";
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 
 const App = () => {
@@ -18,7 +18,7 @@ const App = () => {
   
   const renderNotConnectedContainer = () => (
     <div>
-      <img src="https://media.giphy.com/media/eSwGh3YK54JKU/giphy.gif" alt="emoji" />
+      <img src="https://pbs.twimg.com/profile_images/1560737405346361345/l_n7g9-g_400x400.jpg" alt="emoji" />
 
       <div className="button-container">
         <WalletMultiButton className="cta-button connect-wallet-button" />
@@ -50,8 +50,8 @@ const App = () => {
       <HeadComponent/>
       <div className="container">
         <header className="header-container">
-          <p className="header"> Buy ai art from @solllve</p>
-          <p className="sub-text">I accept shitcoins</p>
+          <p className="header"> Buy ai art from <a href={TWITTER_LINK}>@solllve</a></p>
+          <p className="sub-text">I accept sh*tcoins</p>
 
           {isOwner && (
             <button className="create-product-button" onClick={() => setCreating(!creating)}>
@@ -65,15 +65,6 @@ const App = () => {
           {publicKey ? renderItemBuyContainer() : renderNotConnectedContainer()}
         </main>
 
-        <div className="footer-container">
-          <img alt="Twitter Logo" className="twitter-logo" src="twitter-logo.svg" />
-          <a
-            className="footer-text"
-            href={TWITTER_LINK}
-            target="_blank"
-            rel="noreferrer"
-          >{`built on @${TWITTER_HANDLE}`}</a>
-        </div>
       </div>
     </div>
   );
