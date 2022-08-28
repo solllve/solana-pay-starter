@@ -50,8 +50,8 @@ const App = () => {
       <HeadComponent/>
       <div className="container">
         <header className="header-container">
-          <p className="header"> Buy ai art from <a href={TWITTER_LINK}>@solllve</a></p>
-          <p className="sub-text">I accept sh*tcoins</p>
+          <p className="header">Buy ai art from <a href={TWITTER_LINK}>@solllve</a></p>
+          <p className="sub-text">Free with devnet <a href="https://spl-token-faucet.com/">faucet</a></p>
 
           {isOwner && (
             <button className="create-product-button" onClick={() => setCreating(!creating)}>

@@ -122,7 +122,15 @@ button:disabled {
 .connected-container button {
   height: 50px;
 }
-
+.orders {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.orders div {
+  margin-bottom: 24px;
+}
 .buy-button {
   border: none;
   background-color: #4664ff;
@@ -132,7 +140,9 @@ button:disabled {
   padding: 8px 16px;
   cursor: pointer;
 }
-
+a.download-button {
+  text-decoration: none;
+}
 .download-button {
   border: none;
   background-color: #4664ff;
@@ -166,6 +176,9 @@ button:disabled {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+}
+a {
+  text-decoration: underline;
 }
 /* KeyFrames */
 @-webkit-keyframes gradient-animation {

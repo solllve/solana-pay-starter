@@ -47,7 +47,7 @@ export default function Buy({ itemID }) {
     // Attempt to send the transaction to the network
     try {
       const txHash = await sendTransaction(tx, connection);
-      console.log(`Transaction sent: https://solscan.io/tx/${txHash}?cluster=devnet`);
+      sessionStorage.setItem("receipt", `https://solscan.io/tx/${txHash}?cluster=devnet`)
       setStatus(STATUS.Submitted);
     } catch (error) {
       console.error(error);
@@ -84,7 +84,7 @@ export default function Buy({ itemID }) {
             setStatus(STATUS.Paid);
             addOrder(order);
             setLoading(false);
-            alert("Thank you for your purchase!");
+            console.log("Thank you for your purchase!");
           }
         } catch (e) {
           if (e instanceof FindReferenceError) {
@@ -129,7 +129,7 @@ export default function Buy({ itemID }) {
         <IPFSDownload hash={item.hash} filename={item.filename} />
       ) : (
         <button disabled={loading} className="buy-button" onClick={processTransaction}>
-          Buy now 🠚
+          Buy now
         </button>
       )}
     </div>
